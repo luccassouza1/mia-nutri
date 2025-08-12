@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>🐱 MiaNutri</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="login-screen">
+    <h2>Login</h2>
+    <input id="username" placeholder="Usuário">
+    <input id="password" type="password" placeholder="Senha">
+    <button id="loginBtn">Entrar</button>
+  </div>
+
+  <div id="app" class="hidden">
+    <header>🐱 MiaNutri</header>
+    <section id="daily-plan">
+      <h2>Plano Diário</h2>
+      <ul>
+        <li><label><input type="checkbox" data-meal="cafe"> Café da manhã: Fruta + Aveia</label></li>
+        <li><label><input type="checkbox" data-meal="almoco"> Almoço: Salada + Proteína</label></li>
+        <li><label><input type="checkbox" data-meal="jantar"> Jantar: Sopa + Legumes</label></li>
+      </ul>
+      <textarea id="notes" placeholder="Se não seguiu, descreva o que comeu..."></textarea>
+      <button id="saveBtn">Salvar</button>
+    </section>
+    <section>
+      <h2>Progresso</h2>
+      <canvas id="progressChart"></canvas>
+    </section>
+  </div>
+  
+  <script src="lib/chart.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
